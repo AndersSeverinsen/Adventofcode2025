@@ -45,3 +45,6 @@ out/*
 *.ilg
 *.ind
 *.ist
+
+# AoC does not want the input to be shared
+*.txt

@@ -11,10 +11,11 @@ using namespace std;
 void assert_equal(int expected, int actual) {
     if (expected != actual) {
         cerr << "Assert failed! Expected: " << expected << ", but got: " << actual << endl;
+        throw std::exception();
     }
 }
 
-void task2(string name, int expected) {
+void task2(string name, int expected, bool verbose = false) {
     cout << "Task 2" << endl;
     cout << "Input: " << name << endl;
     string fileame = name + ".txt";
@@ -57,7 +58,7 @@ void task2(string name, int expected) {
 }
 
 int main() {
-    task2("01-sample", 6);
-    task2("01", 6789);
+    task2("01-sample", 6, true);
+    task2("01", 6789, false);
     return 0;
 }
